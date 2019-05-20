@@ -6,7 +6,7 @@
 /*   By: joleblan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/14 14:42:25 by joleblan          #+#    #+#             */
-/*   Updated: 2019/05/15 09:32:07 by joleblan         ###   ########.fr       */
+/*   Updated: 2019/05/20 13:36:37 by joleblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ static int		ft_wc(char const *s, char c)
 	pres = 0;
 	fut = 1;
 	wc = 0;
+	if (s[0] == '\0')
+		return (0);
 	if (s[pres] != c)
 		wc++;
 	while (s[fut])
@@ -66,6 +68,20 @@ char			**ft_strsplit(char const *s, char c)
 		pres++;
 		fut++;
 	}
+	if (s[0] == '\0')
+		array_i = 0;
 	word_array[array_i] = NULL;
 	return (word_array);
 }
+
+//#include <stdio.h>
+//
+//int	main(void)
+//{
+//	static char **tt;
+//	tt = ft_strsplit("", '*');
+//	if (tt &&  tt[0] == NULL)
+//		printf("No problem");
+//	else
+//		printf("Problem");
+//}

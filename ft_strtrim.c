@@ -6,11 +6,13 @@
 /*   By: joleblan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/14 14:46:41 by joleblan          #+#    #+#             */
-/*   Updated: 2019/05/20 12:21:01 by joleblan         ###   ########.fr       */
+/*   Updated: 2019/05/20 13:40:14 by joleblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+#include <stdio.h>
 
 char	*ft_strtrim(char const *s)
 {
@@ -20,9 +22,9 @@ char	*ft_strtrim(char const *s)
 	if (!s)
 		return (NULL);
 	end = ft_strlen(s) - 1;
-	while (end > 0 && (s[end] == ' ' || s[end] == '\t' || s[end] == '\n'))
+	while (end >= 0 && (s[end] == ' ' || s[end] == '\t' || s[end] == '\n'))
 		end--;
-	while (end > 0 && (*s == ' ' || *s == '\t' || *s == '\n'))
+	while (end >=  0 && (*s == ' ' || *s == '\t' || *s == '\n'))
 	{
 		s++;
 		end--;
@@ -36,3 +38,15 @@ char	*ft_strtrim(char const *s)
 	fresh_str[end] = '\0';
 	return (fresh_str);
 }
+
+//#include <stdio.h>
+//
+//int	main(void)
+//{
+//	static char **tt;
+//	tt = ft_strsplit("", '*');
+//	if (tt &&  tt[0] == NULL)
+//		printf("No problem");
+//	else
+//		printf("Problem");
+//}

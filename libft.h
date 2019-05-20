@@ -6,7 +6,7 @@
 /*   By: joleblan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/14 14:54:49 by joleblan          #+#    #+#             */
-/*   Updated: 2019/05/15 07:37:09 by joleblan         ###   ########.fr       */
+/*   Updated: 2019/05/20 12:55:07 by joleblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 
+char				*ft_strtrim(char const *s);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
